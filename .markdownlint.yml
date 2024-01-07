@@ -1,0 +1,2 @@
+line_length: false # The site can handle longer lines
+no-emphasis-as-heading: false # Want to be able to make an entire paragraph italic

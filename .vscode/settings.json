@@ -1,0 +1,15 @@
+{
+  "workbench.editor.labelFormat": "short",
+  "workbench.tree.indent": 16,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "workbench.colorTheme": "Default Dark+",
+  "git.autofetch": true,
+  "[markdown]": {
+    "editor.wordWrap": "off"
+  },
+  "editor.occurrencesHighlight": "off"
+}
