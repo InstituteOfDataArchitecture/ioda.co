@@ -3,10 +3,10 @@ title: Optimizing a relational database
 nextjs:
   metadata:
     title: Optimizing a relational database
-    description: Quidem magni aut exercitationem maxime rerum eos.
+    description: Optimizing a relational database involves enhancing its performance by restructuring its schema, indexing, query design, and other configurations for more efficient data management and retrieval.
 ---
 
-Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
+Optimizing a relational database involves enhancing its performance by restructuring its schema, indexing, query design, and other configurations for more efficient data management and retrieval.
 
 ---
 
@@ -36,5 +36,14 @@ The aim is to provide you with a foundational understanding of database optimiza
 - {% external_link title="Postgres Architecture Explained" url="www.youtube.com/watch?v=Q56kljmIN14" /%}
 - {% external_link title="Database Indexing Explained (with PostgreSQL)" url="www.youtube.com/watch?v=-qNSXK7s7_w" /%}
 - {% external_link title="Secret To Optimizing SQL Queries - Understand The SQL Execution Order" url="www.youtube.com/watch?v=BHwzDmr6d7s" /%}
+
+## What is database optimization?
+
+If you haven't worked profesionally with databases, this next statements may seem controversial:
+
+- Very often, you are not able to make a database run faster by bying more expensive hardware.
+- Nearly all issues with query performance is related to IO (Input/Output between the CPU and storage), not CPU, number of cores, ram, .
+
+## Overly simplified, what is an index?
 
 {% articlefooter %}
