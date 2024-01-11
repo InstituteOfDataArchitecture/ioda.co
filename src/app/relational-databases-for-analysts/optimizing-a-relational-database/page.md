@@ -29,6 +29,12 @@ The **SQL** approach focuses on writing more efficient queries. It's an abstract
 
 The aim is to provide you with a foundational understanding of database optimization and a mental model for how databases operate. You'll learn about understanding and balancing trade-offs, develop skills to reason through technical processes, address performance issues effectively, and importantly, understand how present decisions impact future outcomes.
 
+## The b-tree index
+
+There are many different types of database indexes, and the ones available depend on the database you are using. The most common index is the B-tree index. It is the default index in most relational databases.
+
+In this lesson we will focus on the b-tree index.
+
 ## External links
 
 - {% external_link title="5 Secrets for making PostgreSQL run BLAZING FAST. How to improve database performance." url="www.youtube.com/watch?v=YON9PliOYFk" /%}
