@@ -31,7 +31,7 @@ The aim is to provide you with a foundational understanding of database optimiza
 
 ## The b-tree index
 
-There are many different types of database indexes, and the ones available depend on the database you are using. The most common index is the B-tree index. It is the default index in most relational databases.
+There are many different types of database indexes, and the ones available depend on the database you are using. The most common index is the B-tree index. It is the default index in most relational databases including Postgres.
 
 In this lesson we will focus on the b-tree index.
 
