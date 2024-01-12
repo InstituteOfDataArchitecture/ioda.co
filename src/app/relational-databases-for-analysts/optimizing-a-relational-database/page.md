@@ -27,7 +27,66 @@ The **SQL** approach focuses on writing more efficient queries. It's an abstract
 
 **Indexes** can enhance query performance by enabling faster retrieval of specific rows from storage. This lesson focuses on indexes.
 
-The aim is to provide you with a foundational understanding of database optimization and a mental model for how databases operate. You'll learn about understanding and balancing trade-offs, develop skills to reason through technical processes, address performance issues effectively, and importantly, understand how present decisions impact future outcomes.
+## This is just an introduction
+
+If you are not familiar with computer sceince, this lesson will seem a bit overwhelming. Don't worry, you don't need to understand everything, and the training will not be difficult. The aim is to give you a high-level mental model of what database optimization is.
+
+## IO The most important factor
+
+The IO (Input/Output) between storage and CPU is the bottleneck of a database.
+
+IO is the communication between the CPU and storage. Everytime the CPU needs a piece of data, it has to ask the storage for it. The storage then sends the data back to the CPU. This is called IO. And this operation has a small overhead.
+
+The overhead is small, but not negligible.
+
+### IO by example (overly simplified)
+
+Let's say the database can read 1 rows in one IO operation, and that takes 1 ms (millisecond or one thousands of a second).
+
+_**Note.** In reality, the database can usually read a lot more than one row in one IO operation._
+
+If you need to read 10 000 rows, that will take 10 000 IO operations, and 10 seconds.
+
+#### A simple where clause
+
+So let's assume you have a table with 10 000 rows, and you want to find all rows where the column `name` is equal to `Lenny Dexter`.
+
+```sql
+select * from users where name = 'Lenny Dexter';
+```
+
+Eventhough we only want one row, the database will have to read all 10 000 rows to find the one row where `name` is equal to `Lenny Dexter`. That will take 10 000 IO operations.
+
+#### A simple join clause
+
+Let's say you have two tables, `users` and `orders`. And you want to find all `completed` orders for the user `Lenny Dexter`.
+
+```sql
+select * from users
+left join orders on users.id = orders.user_id
+where users.name = 'Lenny Dexter'
+and orders.status = 'completed';
+```
+
+The table `users` still have 10 000 rows, and the table `orders` have 1 000 000 rows.
+
+In this case
+
+The database will have to read all 10 000 rows from the table `users` to find the one row where `name` is equal to `Lenny Dexter`. That will take 10 000 IO operations.
+
+Then the database will have to read all rows from the table `orders` to find all orders for the user `Lenny Dexter`. Let's say that is 1000 rows. That will take 1000 IO operations.
+
+But let's say we introduce an index.
+
+Let's say you have a table with 1 000 000 000 rows. And you want to find all rows where the column `name` is equal to `John`.
+
+If you don't have an index on the column `name`, the database will have to read all 1 000 000 000 rows to find the rows where `name` is equal to `John`. That will take 1 000 000 IO operations.
+
+Now, what if we introduce an index?
+
+If you have an index on the column `name`, the database will only have to read the rows where `name` is equal to `John`. Let's say that is 1000 rows. That will take 1 IO operation.
+
+## Intexes deep dive (optional)
 
 ## The b-tree index
 
