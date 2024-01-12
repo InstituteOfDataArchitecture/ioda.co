@@ -59,13 +59,13 @@ Eventhough we only want one row, the database will have to read all 10 000 rows 
 
 #### A simple join clause
 
-Let's say you have two tables, `users` and `orders`. And you want to find all `completed` orders for the user `Lenny Dexter`.
+Let's say you have two tables, `users` and `orders`. And you want to find all orders for the user `Lenny Dexter`.
 
 ```sql
-select * from users
-left join orders on users.id = orders.user_id
-where users.name = 'Lenny Dexter'
-and orders.status = 'completed';
+select *
+from users, orders
+where users.id = orders.user_id
+and users.name = 'Lenny Dexter'
 ```
 
 The table `users` still have 10 000 rows, and the table `orders` have 1 000 000 rows.
