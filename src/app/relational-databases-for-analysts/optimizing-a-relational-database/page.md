@@ -10,6 +10,8 @@ Optimizing a relational database involves enhancing its performance by restructu
 
 ---
 
+SKRIV HEADLINES TIL DET HELE
+
 ## The database optimization process
 
 There are four key approaches to database optimization.
@@ -21,25 +23,25 @@ There are four key approaches to database optimization.
 
 As the name suggests, the Institute of Data Architecture emphasizes data **architecture**. One of the strongest ways to optimize both database performance and business performance is to have a good architecture around data. In this section we will touch on a subsection of data architecture, namely schema design, and see how that can improve query performance.
 
-**Database administration** for performance can be defined in optimizing settings in the database, usually performed by a DBA (Database Administrator). This is both an art and a science and requires intimate knowledge of the chosen database. Database performance tuning, though important, is not the focus of the Institute of Data Architecture. Today, modern hosted databases can handle more than a trillion (1 000 000 000 000) rows by implementing a good schema design and writing good SQL. So the DBA role is becoming more and more specialized.
+**Database administration** for performance can be defined in optimizing settings in the database, usually performed by a DBA (Database Administrator). This is both an art and a science and requires intimate knowledge of the chosen database. Database performance tuning, though important, is not the focus of the Institute of Data Architecture. Today, modern hosted databases can easily handle a billion rows and often handle more than a trillion (1 000 000 000 000) rows by implementing a good schema design and writing good SQL. So the DBA role is becoming more and more specialized.
 
-The **SQL** approach focuses on writing more efficient queries. It's an abstract concept, influenced by various factors such as database type, brand, settings, business requirements, and hardware. All courses at the Institute of Data Architecture touch on this in some way.
+The **SQL** approach focuses on writing more efficient queries. It's an abstract concept, influenced by various factors such as database type, database brand, settings, business requirements, and hardware. All courses at the Institute of Data Architecture touch on this in some way.
 
 **Indexes** can enhance query performance by enabling faster retrieval of specific rows from storage. This lesson focuses on indexes.
 
 ## This is just an introduction
 
-If you are not familiar with computer sceince, this lesson will seem a bit overwhelming. Don't worry, you don't need to understand everything, and the training will not be difficult. The aim is to give you a high-level mental model of what database optimization is.
+If you are not familiar with computer sceince, this lesson will seem a bit overwhelming. Don't worry, you don't need to understand everything, and the training will not be difficult. The aim is just to give you a high-level mental model of what database optimization is.
 
 ## IO The most important factor
 
-The IO (Input/Output) between storage and CPU is the bottleneck of a database.
+The IO (Input/Output) between storage and CPU is the most common bottleneck of a database.
 
 IO is the communication between the CPU and storage. Everytime the CPU needs a piece of data, it has to ask the storage for it. The storage then sends the data back to the CPU. This is called IO. And this operation has a small overhead.
 
 The overhead is small, but not negligible.
 
-### IO by example (overly simplified)
+### IO by example (overly simplified) - indfør 1000 rows
 
 Let's say the database can read 1 rows in one IO operation, and that takes 1 ms (millisecond or one thousands of a second).
 
@@ -57,7 +59,7 @@ select * from users where name = 'Lenny Dexter';
 
 Eventhough we only want one row, the database will have to read all 10 000 rows to find the one row where `name` is equal to `Lenny Dexter`. That will take 10 000 IO operations.
 
-#### A simple join clause
+#### A simple bad join
 
 Let's say you have two tables, `users` and `orders`. And you want to find all orders for the user `Lenny Dexter`.
 
@@ -70,21 +72,11 @@ and users.name = 'Lenny Dexter'
 
 The table `users` still have 10 000 rows, and the table `orders` have 1 000 000 rows.
 
-In this case
+In this case the database will have to read each row from the table `orders` for every row in the table `users`. That will take 10 000 \* 1 000 000 = 10 000 000 000 IO operations, that is 115 days, 17 hours, 46 minutes, and 40 seconds.
 
-The database will have to read all 10 000 rows from the table `users` to find the one row where `name` is equal to `Lenny Dexter`. That will take 10 000 IO operations.
+#### Scalability issues of bad joins
 
-Then the database will have to read all rows from the table `orders` to find all orders for the user `Lenny Dexter`. Let's say that is 1000 rows. That will take 1000 IO operations.
-
-But let's say we introduce an index.
-
-Let's say you have a table with 1 000 000 000 rows. And you want to find all rows where the column `name` is equal to `John`.
-
-If you don't have an index on the column `name`, the database will have to read all 1 000 000 000 rows to find the rows where `name` is equal to `John`. That will take 1 000 000 IO operations.
-
-Now, what if we introduce an index?
-
-If you have an index on the column `name`, the database will only have to read the rows where `name` is equal to `John`. Let's say that is 1000 rows. That will take 1 IO operation.
+#### Optimizing with an index
 
 ## Intexes deep dive (optional)
 
