@@ -10,8 +10,6 @@ Optimizing a relational database involves enhancing its performance by restructu
 
 ---
 
-SKRIV HEADLINES TIL DET HELE
-
 ## The database optimization process
 
 There are four key approaches to database optimization.
@@ -29,10 +27,6 @@ The **SQL** approach focuses on writing more efficient queries. All courses at t
 
 **Indexes** can enhance query performance by enabling faster retrieval of specific rows from storage. This lesson focuses on indexes.
 
-## This is just an introduction
-
-If you are not familiar with computer sceince, this lesson will seem a bit overwhelming. Don't worry, you don't need to understand everything, and the training will not be difficult. The aim is just to give you a high-level mental model of what database optimization is.
-
 ## IO The most important factor
 
 The IO (Input/Output) between storage and CPU is the most common bottleneck of a database.
@@ -40,6 +34,17 @@ The IO (Input/Output) between storage and CPU is the most common bottleneck of a
 IO is the communication between the CPU and storage. Everytime the CPU needs a piece of data, it has to ask the storage for it. The storage then sends the data back to the CPU. This is called IO. And this operation has a small overhead.
 
 The overhead is small, but not negligible.
+
+## Create 
+
+1. Create a text file
+2. Create schema for 1.1.1
+3. Create customers and sales table
+4. Training: run a simple select query and see how long it takes
+5. Training: add an index and see how long it takes
+6. Training: run a bad join and see how long it takes
+7. Training: run a god join and see how long it takes
+8. Training: add an index and see how long it takes
 
 ### IO by example (overly simplified) - indfør 1000 rows
 
