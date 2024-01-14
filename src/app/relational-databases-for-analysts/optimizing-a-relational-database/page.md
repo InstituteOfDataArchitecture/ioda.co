@@ -21,11 +21,11 @@ There are four key approaches to database optimization.
 - SQL
 - Indexes
 
-As the name suggests, the Institute of Data Architecture emphasizes data **architecture**. One of the strongest ways to optimize both database performance and business performance is to have a good architecture around data. In this section we will touch on a subsection of data architecture, namely schema design, and see how that can improve query performance.
+As the name suggests, the Institute of Data Architecture emphasizes data **architecture**. In this section we will touch on a subsection of data architecture, namely _schema design_, and see how that can improve query performance.
 
-**Database administration** for performance can be defined in optimizing settings in the database, usually performed by a DBA (Database Administrator). This is both an art and a science and requires intimate knowledge of the chosen database. Database performance tuning, though important, is not the focus of the Institute of Data Architecture. Today, modern hosted databases can easily handle a billion rows and often handle more than a trillion (1 000 000 000 000) rows by implementing a good schema design and writing good SQL. So the DBA role is becoming more and more specialized.
+**Database administration** for performance can be defined in optimizing settings in the database, usually performed by a DBA (Database Administrator). This is both an art and a science and requires intimate knowledge of the chosen database. Database performance tuning, though important, is not the focus of the Institute of Data Architecture.
 
-The **SQL** approach focuses on writing more efficient queries. It's an abstract concept, influenced by various factors such as database type, database brand, settings, business requirements, and hardware. All courses at the Institute of Data Architecture touch on this in some way.
+The **SQL** approach focuses on writing more efficient queries. All courses at the Institute of Data Architecture touch on this in some way.
 
 **Indexes** can enhance query performance by enabling faster retrieval of specific rows from storage. This lesson focuses on indexes.
 
