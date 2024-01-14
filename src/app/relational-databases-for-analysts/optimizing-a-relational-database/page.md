@@ -75,30 +75,6 @@ where users.id = orders.user_id
 and users.name = 'Lenny Dexter'
 ```
 
-The table `users` still have 10 000 rows, and the table `orders` have 1 000 000 rows.
-
-In this case the database will have to read each row from the table `orders` for every row in the table `users`. That will take 10 000 \* 1 000 000 = 10 000 000 000 IO operations, that is 115 days, 17 hours, 46 minutes, and 40 seconds.
-
-#### Scalability issues of bad joins
-
-#### Optimizing with an index
-
-## Intexes deep dive (optional)
-
-## The b-tree index
-
-There are many different types of database indexes, and the ones available depend on the database you are using. The most common index is the B-tree index. It is the default index in most relational databases including Postgres.
-
-In this lesson we will focus on the b-tree index.
-
-## External links
-
-- {% external_link title="5 Secrets for making PostgreSQL run BLAZING FAST. How to improve database performance." url="www.youtube.com/watch?v=YON9PliOYFk" /%}
-- {% external_link title="PostgreSQL execution plan visualizer" url="explain.dalibo.com" /%}
-- {% external_link title="Postgres Architecture Explained" url="www.youtube.com/watch?v=Q56kljmIN14" /%}
-- {% external_link title="Database Indexing Explained (with PostgreSQL)" url="www.youtube.com/watch?v=-qNSXK7s7_w" /%}
-- {% external_link title="Secret To Optimizing SQL Queries - Understand The SQL Execution Order" url="www.youtube.com/watch?v=BHwzDmr6d7s" /%}
-
 ## What is database optimization?
 
 If you haven't worked profesionally with databases, this next statements may seem controversial:
@@ -107,5 +83,15 @@ If you haven't worked profesionally with databases, this next statements may see
 - Nearly all issues with query performance is related to IO (Input/Output between the CPU and storage), not CPU, number of cores, ram, .
 
 ## Overly simplified, what is an index?
+
+## The database optimization process external resources
+
+- {% external_link title="5 Secrets for making PostgreSQL run BLAZING FAST. How to improve database performance." url="www.youtube.com/watch?v=YON9PliOYFk" /%}
+- {% external_link title="PostgreSQL execution plan visualizer" url="explain.dalibo.com" /%}
+- {% external_link title="Postgres Architecture Explained" url="www.youtube.com/watch?v=Q56kljmIN14" /%}
+- {% external_link title="Database Indexing Explained (with PostgreSQL)" url="www.youtube.com/watch?v=-qNSXK7s7_w" /%}
+- {% external_link title="Secret To Optimizing SQL Queries - Understand The SQL Execution Order" url="www.youtube.com/watch?v=BHwzDmr6d7s" /%}
+
+
 
 {% articlefooter %}
