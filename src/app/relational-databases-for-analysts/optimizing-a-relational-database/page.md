@@ -35,7 +35,7 @@ IO is the communication between the CPU and storage. Everytime the CPU needs a p
 
 The overhead is small, but not negligible.
 
-## Create 
+## Create
 
 1. Create a text file
 2. Create schema for 1.1.1
@@ -91,7 +91,5 @@ If you haven't worked profesionally with databases, this next statements may see
 - {% external_link title="Postgres Architecture Explained" url="www.youtube.com/watch?v=Q56kljmIN14" /%}
 - {% external_link title="Database Indexing Explained (with PostgreSQL)" url="www.youtube.com/watch?v=-qNSXK7s7_w" /%}
 - {% external_link title="Secret To Optimizing SQL Queries - Understand The SQL Execution Order" url="www.youtube.com/watch?v=BHwzDmr6d7s" /%}
-
-
 
 {% articlefooter %}
