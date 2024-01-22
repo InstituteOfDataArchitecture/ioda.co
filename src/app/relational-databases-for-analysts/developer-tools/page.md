@@ -241,7 +241,7 @@ To test if Python is installed correctly. In the codespace, run the following Py
     githubName="InstituteOfDataArchitecture"
     repo="DevelopmentSetup"
     branch="main"
-    filePath="courses/1-relational-databases-for-analysts/1-test-the-setup/1-test-python/python-logging.py"
+    filePath="courses/1-relational-databases-for-analysts/1-test-the-setup/1-test-python/python_logging.py"
     language="python"
 /%}
 
@@ -271,7 +271,7 @@ To test if Postgres and sqltools are installed correctly. In the codespace, run 
     githubName="InstituteOfDataArchitecture"
     repo="DevelopmentSetup"
     branch="main"
-    filePath="courses/1-relational-databases-for-analysts/1-test-the-setup/2-test-postgres/create-cities-table.sql"
+    filePath="courses/1-relational-databases-for-analysts/1-test-the-setup/2-test-postgres/create_cities_table.sql"
     language="sql"
 /%}
 
