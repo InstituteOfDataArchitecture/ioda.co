@@ -3,16 +3,32 @@ title: Training
 nextjs:
   metadata:
     title: Training
-    description: Quidem magni aut exercitationem maxime rerum eos.
+    description: Training and self assessment for Relational databases for analysts
 ---
 
-Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
+Training and self assessment for Relational databases for analysts
 
 ---
 
 ## How training and self assessment works
 
-Read our guide to [Training Self assessment](/training-self-assessment)
+{% youtube videoId="_qDa6o4behU" /%}
+
+1. Start a new codespace.
+1. Open the terminal.
+1. Execute `whoami`.
+1. The `work` directory.
+1. Create, execute, and read results for `python-logging.py`.
+1. The `answer.txt` file.
+1. The `evaluate_answers.py` file.
+1. Commit and push your answers.
+1. Delete and start a new codespace.
+
+```bash
+python /workspace/courses/evaluate_answers.py
+```
+
+_About git and branching. If you are familiar with git, we encourage you to use branched and PRs when working on the answers. However, **if you are new to git, it is fine just to commit everything to the `main` branch**._
 
 ## 1. Relational databases for analysts
 
