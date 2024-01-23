@@ -12,17 +12,23 @@ Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo ex
 
 ## How training and self assessment works
 
-1. Start your codespace
-1. Open the terminal
-1. Execute whoami
-1. The `work` directory
-1. Create, execute, and read results for `python-logging.py`
+{% youtube videoId="_qDa6o4behU" /%}
+
+1. Start a new codespace.
+1. Open the terminal.
+1. Execute `whoami`.
+1. The `work` directory.
+1. Create, execute, and read results for `python-logging.py`.
+1. The `answer.txt` file.
+1. The `evaluate_answers.py` file.
+1. Commit and push your answers.
+1. Delete and start a new codespace.
 
 ```bash
-python /workspace/courses/1-relational-databases-for-analysts/evaluate_answers.py
+python /workspace/courses/evaluate_answers.py
 ```
 
-About git and branching. If you are familiar with git, we encourage you to use branched and PRs when working on the answers. However, **if you are new to git, it is fine just to commit everything to the `main` branch**.
+_About git and branching. If you are familiar with git, we encourage you to use branched and PRs when working on the answers. However, **if you are new to git, it is fine just to commit everything to the `main` branch**._
 
 ## 1. Relational databases for analysts
 
