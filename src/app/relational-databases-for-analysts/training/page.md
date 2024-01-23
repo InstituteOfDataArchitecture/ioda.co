@@ -3,10 +3,10 @@ title: Training
 nextjs:
   metadata:
     title: Training
-    description: Quidem magni aut exercitationem maxime rerum eos.
+    description: Training and self assessment for Relational databases for analysts
 ---
 
-Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
+Training and self assessment for Relational databases for analysts
 
 ---
 
