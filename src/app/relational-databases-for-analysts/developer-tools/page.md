@@ -278,6 +278,15 @@ To test if Postgres and sqltools are installed correctly. In the codespace, run 
     githubName="InstituteOfDataArchitecture"
     repo="DevelopmentSetup"
     branch="main"
+    filePath="courses/1-relational-databases-for-analysts/1-test-the-setup/2-test-postgres/create_one_one_schema.sql"
+    language="sql"
+/%}
+
+{%
+    githubfile
+    githubName="InstituteOfDataArchitecture"
+    repo="DevelopmentSetup"
+    branch="main"
     filePath="courses/1-relational-databases-for-analysts/1-test-the-setup/2-test-postgres/create_cities_table.sql"
     language="sql"
 /%}

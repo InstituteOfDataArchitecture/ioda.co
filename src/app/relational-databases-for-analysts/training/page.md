@@ -12,9 +12,9 @@ Training and self assessment for Relational databases for analysts
 
 ## How training and self assessment works
 
-{% youtube videoId="_qDa6o4behU" /%}
-
 1. Start a new codespace.
+1. Close and reopen the codespace.
+   - To see that an already created codespace is much faster to open.
 1. Open the terminal.
 1. Execute `whoami`.
 1. The `courses` and the `work` folder.
@@ -26,6 +26,7 @@ Training and self assessment for Relational databases for analysts
 1. The `evaluate_answers.py` file.
    - python `/workspace/courses/evaluate_answers.py`
 1. Commit and push your answers.
+1. Open SQLTools and find the `sales` table.
 1. Delete and start a new codespace.
 
 ```bash
