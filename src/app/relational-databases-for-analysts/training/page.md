@@ -27,6 +27,13 @@ Training and self assessment for Relational databases for analysts
    - python `/workspace/courses/evaluate_answers.py`
 1. Commit and push your answers.
 1. Open SQLTools and find the `sales` table.
+1. Set up the test for Postgres.
+   - Create the folder `2-test-postgres`.
+   - Create the file `create_one_one_schema.sql`.
+   - Create the file `create_cities_table.sql`.
+   - Create the file `total_population.sql`.
+1. Run the three files.
+1. Validate the results.
 1. Delete and start a new codespace.
 
 ```bash
