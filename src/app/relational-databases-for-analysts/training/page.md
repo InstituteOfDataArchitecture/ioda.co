@@ -12,16 +12,28 @@ Training and self assessment for Relational databases for analysts
 
 ## How training and self assessment works
 
-{% youtube videoId="_qDa6o4behU" /%}
-
 1. Start a new codespace.
+1. Close and reopen the codespace.
+   - To see that an already created codespace is much faster to open.
 1. Open the terminal.
 1. Execute `whoami`.
-1. The `work` directory.
-1. Create, execute, and read results for `python-logging.py`.
-1. The `answer.txt` file.
+1. The `courses` and the `work` folder.
+   - The `courses` folder contains the training material and **will** be changed by Ioda.
+   - The `work` folder contains your work and **will NOT** be changed by Ioda.
+1. Create the folders `1-relational-databases-for-analysts/1-test-the-setup/1-test-python` in the `work` folder.
+1. Create, execute, and read results for `python_logging.py`.
+1. The `answers.txt` file.
 1. The `evaluate_answers.py` file.
+   - python `/workspace/courses/evaluate_answers.py`
 1. Commit and push your answers.
+1. Open SQLTools and find the `sales` table.
+1. Set up the test for Postgres.
+   - Create the folder `2-test-postgres`.
+   - Create the file `create_one_one_schema.sql`.
+   - Create the file `create_cities_table.sql`.
+   - Create the file `total_population.sql`.
+1. Run the three files.
+1. Validate the results.
 1. Delete and start a new codespace.
 
 ```bash
