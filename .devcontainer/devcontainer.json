@@ -10,11 +10,11 @@
       "installZsh": true,
       "configureZshAsDefaultShell": true,
       "installOhMyZsh": true,
-      "upgradePackages": true
+      "upgradePackages": true,
     },
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "18"
-    }
+      "version": "18",
+    },
   },
   "customizations": {
     "vscode": {
@@ -22,18 +22,17 @@
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint",
         "bradlc.vscode-tailwindcss",
-        "fivethree.vscode-svelte-snippets",
         "vincaslt.highlight-matching-tag",
         "heybourn.headwind",
         "davidanson.vscode-markdownlint",
-        "github.copilot-chat"
-      ]
-    }
+        "github.copilot-chat",
+      ],
+    },
   },
   "postCreateCommand": "zsh .devcontainer/postCreateCommand.zsh",
   "remoteEnv": {
-    "NEXT_TELEMETRY_DISABLED": "1"
-  }
+    "NEXT_TELEMETRY_DISABLED": "1",
+  },
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root
   // "remoteUser": "root"
 }
